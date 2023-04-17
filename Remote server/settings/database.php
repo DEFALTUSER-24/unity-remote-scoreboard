@@ -12,7 +12,7 @@
             //set up here your database credentials, or you can modify the script to include them outside the file, for example an .ENV file.
             $db = mysqli_connect("host", "username", "password", "database_name");
             if ($db->connect_error) {
-                die(json_encode(array("errorDesc" => "Error de conexión con la base de datos."), JSON_FORCE_OBJECT));
+                die(json_encode(array("errorDesc" => "Database connection error."), JSON_FORCE_OBJECT));
             }
 
             self::$conn = $db;

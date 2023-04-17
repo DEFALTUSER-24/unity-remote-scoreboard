@@ -6,7 +6,7 @@
 
     //Checks if request is valid (if "action" was used as a $_GET parameter).
     if (!request::IsValid())
-        request::EndWithError("Solicitud inválida.");
+        request::EndWithError("Invalid request.");
 
     $action = $_GET["action"];
 
@@ -16,7 +16,7 @@
         case "add-score":
         {
             if (!request::IsPost())
-                request::EndWithError("Esta solicitud tiene que ser tipo POST.");
+                request::EndWithError("This should be a POST request.");
 
             require "requests/store-data.php";
             break;
@@ -24,13 +24,13 @@
         case "get-scores":
         {
             if (!request::IsGet())
-                request::EndWithError("Esta solicitud tiene que ser tipo GET.");
+                request::EndWithError("This should be a GET request.");
 
             require "requests/get-data.php";
             break;
         }
         default:
         {
-            request::EndWithError("Acción inválida.");
+            request::EndWithError("Invalid action.");
         }
     }

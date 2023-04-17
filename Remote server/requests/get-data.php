@@ -7,7 +7,7 @@
 
     //If no result was found, end with error.
     if (!database::Result($query_result))
-        request::EndWithError("No se encontraron puntajes.");
+        request::EndWithError("No scores were found.");
 
     $query_data = array();
 

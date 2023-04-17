@@ -2,7 +2,7 @@
 
     //Checks if POST request contains specified values.
     if (!request::PostHasKeys("name", "score")) {
-        request::EndWithError("Solicitud POST inválida, faltan datos.");
+        request::EndWithError("Invalid POST request, missing form data.");
     }
 
     //Connect to database
@@ -25,7 +25,7 @@
 
     //If username is invalid, throw error
     if ($username == "") {
-        request::EndWithError("El nombre de usuario no puede estar vacío.");
+        request::EndWithError("Username shouldn't be empty.");
     }
 
     //Send changes to database
@@ -33,7 +33,7 @@
 
     //If no changes were made, end with error.
     if (!database::WasAffected()) {
-        request::EndWithError("Query SQL inválida. No se agregó el puntaje.");
+        request::EndWithError("Invalid SQL Query. Score was not set.");
     }
 
     request::End(true);
