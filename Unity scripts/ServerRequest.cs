@@ -5,6 +5,8 @@ using UnityEngine.Networking;
 
 public class ServerRequest : MonoBehaviour
 {
+    private string server_url = "":
+
     /// <summary>
     /// Executes "GetScores_Coroutine()" coroutine that sends a GET request to the web server to obtain the scoreboard data.
     /// </summary>
@@ -19,7 +21,7 @@ public class ServerRequest : MonoBehaviour
     /// <returns></returns>
     IEnumerator GetScores_Coroutine()
     {
-        string url = ""; //Server URL where to do the GET request and obtain the scores.
+        string url = server_url + "?action=get-scores"; //Server URL where to do the GET request and obtain the scores.
 
         using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
         {
@@ -67,7 +69,7 @@ public class ServerRequest : MonoBehaviour
     /// <returns></returns>
     IEnumerator SaveScore_Coroutine(int playerScore, string playerName)
     {
-        string url = ""; //Server URL where to do the POST request and upload a the score.
+        string url = server_url + "?action=add-score"; //Server URL where to do the POST request and upload a the score.
 
         //Create form, add inputs and values.
         WWWForm form = new WWWForm();
