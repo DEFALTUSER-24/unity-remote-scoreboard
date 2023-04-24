@@ -46,7 +46,7 @@ public class ServerRequest : MonoBehaviour
             }
             else
             {
-                //Error on request.
+                //If request failed.
             }
         }
     }
@@ -81,7 +81,7 @@ public class ServerRequest : MonoBehaviour
             yield return request.SendWebRequest();
             if (request.result == UnityWebRequest.Result.Success)
             {
-                //If request vas successful.
+                //If request was successful.
             }
             else
             {
