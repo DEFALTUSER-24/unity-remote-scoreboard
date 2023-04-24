@@ -1,7 +1,7 @@
 # Unity Remote Scoreboard
 
-This is a basic example of how to do a simple scoreboard in Unity. How you decide to show the scores in game is your choice, this example will help you to grab and uplaod content from a remote server.
-Remote server files are writen in PHP 8.0.
+This is a basic example of how to do a simple scoreboard in Unity. How you decide to show the scores in-game is your choice, this example will help you to grab and upload content from/to a remote server.
+Server files are writen in PHP 8.0.
 
 ## Content
 
