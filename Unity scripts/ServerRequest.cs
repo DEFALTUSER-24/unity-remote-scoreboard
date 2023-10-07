@@ -33,7 +33,7 @@ public class ServerRequest : MonoBehaviour
                  * Since Unity can't handle JSON arrays you should use JsonHelper class.
                  * An example would be:
                  * 
-                 * ServerScoreboardData[] json = JsonHelper.FromJson<ServerScoreboardData>(json_data);
+                 * ServerScoreboardData[] json = JsonHelper.FromJson<ServerScoreboardData>(webRequest.downloadHandler.text);
                  * 
                  * And then foreach every result.
                  * 
