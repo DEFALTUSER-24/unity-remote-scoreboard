@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class ServerRequest : MonoBehaviour
 {
-    private string server_url = "":
+    private string server_url = "";
 
     /// <summary>
     /// Executes "GetScores_Coroutine()" coroutine that sends a GET request to the web server to obtain the scoreboard data.
@@ -58,7 +58,7 @@ public class ServerRequest : MonoBehaviour
     /// <param name="playerName"></param>
     public void SaveScore(int playerScore, string playerName)
     {
-        StartCoroutine(SaveScore_Coroutine(playerScore, playerName, gameLevel));
+        StartCoroutine(SaveScore_Coroutine(playerScore, playerName));
     }
 
     /// <summary>
