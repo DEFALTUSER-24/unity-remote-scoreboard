@@ -1,5 +1,7 @@
 <?php
 
+    header("Access-Control-Allow-Origin: *");
+    
     //Require specified files.
     require "settings/database.php";
     require "settings/request.php";
